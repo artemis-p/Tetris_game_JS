@@ -1,10 +1,11 @@
 document.addEventListener('DOMContentLoaded', () => {
   const grid = document.querySelector('.grid')
   let squares = Array.from(document.querySelectorAll('.grid div'))
-  const ScoreDisplay = document.querySelector('#score')
-  const StartBtn = document.querySelector('#start-button')
+  const scoreDisplay = document.querySelector('#score')
+  const startBtn = document.querySelector('#start-button')
   const width = 10
   let nextRandom = 0
+  let timerId // this is null
 
 
   // The Tetrominoes
@@ -71,7 +72,7 @@ function undraw() {
 }
 
 // make the tetromino move down every second
-timerId = setInterval(moveDown, 500)
+//timerId = setInterval(moveDown, 500) - we want the timer to start when we press the start button
 
 //assign functions to keyCodes
 function control(e) {
@@ -176,6 +177,20 @@ function displayShape() {
   })
 }
 
+
+//add functionality to the button
+startBtn.addEventListener('click', () => {
+  //if there is a timer we want to stop the game - pause 
+  if (timerId) {
+    clearInterval(timerId)
+    timerId = null
+  } else { // else we want to start the game by invoking the moveDown method for the next shape of tetromino
+    draw()
+    timerId = setInterval(moveDown, 1000)
+    nextRandom = Math.floor(Math.random()*theTetrominoes.length)
+    displayShape()
+  }
+})
 
 
 
