@@ -140,11 +140,13 @@ function moveRight() {
 function rotate() {
   undraw()
   currentRotation ++ // we use the increment operator to move down to the next item in our array, which is the layout we added for th ecurrent tetromino
-  if(currentRotation === current.length) { //if the current rotation gets to 4, make it go back to 0
+  if(currentRotation === current.length) { //if the current rotation(index) gets to 4, make it go back to 0(the initial shape of that tetromino)
     currentRotation = 0
   }
-  current = theTetrominoes[random][currentRotation]
+  current = theTetrominoes[random][currentRotation] //if the above is false then we pass on the next shape for our tetromino
+  draw()
 }
+
 
 
 
