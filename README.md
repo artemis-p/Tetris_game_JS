@@ -4,7 +4,7 @@ A simple Tetris game, similar to the ones most of us have played when we were yo
 ## Visit the web app
 You can find the deployed app in the following link: https://artemis-p.github.io/Tetris_game_JS/
 
-## How to play:
+## How to play
 - Hit the 'Start/Pause' button on the website to start playing the game.
 - Move the tetrominoes down, left and right by clicking the respective arrow keys in your keyboard.
 - Change the rotation of the tetromino by clicking the up arrow key in your keyboard.
