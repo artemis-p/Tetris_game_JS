@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
   let nextRandom = 0
   let timerId // this is null
   let score = 0
-  const colours = [
+  const colors = [
     'orange', //ltertromino colour
     'red', //ztetromino
     'purple',
@@ -59,6 +59,8 @@ const theTetrominoes = [lTetromino, zTetromino, tTetromino, oTetromino, iTetromi
 let currentPosition = 4
 let currentRotation = 0
 
+console.log(theTetrominoes[0][0])
+
 // randomly slect a Tetromino and its first rotation
 let random = Math.floor(Math.random()*theTetrominoes.length)
 let current = theTetrominoes[random][currentRotation]
@@ -67,7 +69,7 @@ let current = theTetrominoes[random][currentRotation]
 function draw() {
   current.forEach(index => {
     squares[currentPosition + index].classList.add('tetromino')
-    squares[currentPosition + index].style.backgroundColor = colours[random]
+    squares[currentPosition + index].style.backgroundColor = colors[random]
   })
 }
 
@@ -76,6 +78,7 @@ function undraw() {
   current.forEach(index => {
     squares[currentPosition + index].classList.remove('tetromino')
     squares[currentPosition + index].style.backgroundColor = ''
+
   })
 }
 
@@ -109,12 +112,12 @@ function freeze() {
   if(current.some(index => squares[currentPosition + index + width].classList.contains('taken'))) {
     current.forEach(index => squares[currentPosition + index].classList.add('taken'))
     // start a new tetromino falling
-    console.log(nextRandom)
+    //console.log(nextRandom)
     random = nextRandom
     nextRandom = Math.floor(Math.random() * theTetrominoes.length)
     current = theTetrominoes[random][currentRotation]
     currentPosition = 4
-    console.log(nextRandom)
+    //console.log(nextRandom)
     draw()
     displayShape()
     addScore()
@@ -126,9 +129,7 @@ function freeze() {
 function moveLeft() {
   undraw()
     const isAtLeftEdge = current.some(index => (currentPosition + index) % width === 0)
-
     if(!isAtLeftEdge) currentPosition -= 1
-
     if(current.some(index => squares[currentPosition + index].classList.contains('taken'))) {
       currentPosition += 1
     }
@@ -140,9 +141,7 @@ function moveLeft() {
 function moveRight() {
   undraw()
   const isAtRightEdge = current.some(index => (currentPosition + index) % width === width -1)
-
   if(!isAtRightEdge) currentPosition += 1
-
   if(current.some(index => squares[currentPosition + index].classList.contains('taken'))) {
     currentPosition -=1
   }
@@ -164,7 +163,7 @@ function rotate() {
 // show up next tetromino in mini-grid display
 const displaySquares= document.querySelectorAll('.mini-grid div') //we use querySelectorAll because we want all the divs in the mini-grid class 
 const displayWidth = 4 // this tells our JS how big the width of our mini-grid is
-let displayIndex = 0 // this tells JS to talk to the mini-grid only
+const displayIndex = 0 // this tells JS to talk to the mini-grid only
 
 
 //the Tetrominoes without rotation (the first shape of each tetromino)
@@ -185,7 +184,7 @@ function displayShape() {
   })
   upNextTetrominoes[nextRandom].forEach( index => {
     displaySquares[displayIndex + index].classList.add('tetromino')
-    displaySquares[displayIndex + index].style.backgroundColor = colours[nextRandom]
+    displaySquares[displayIndex + index].style.backgroundColor = colors[nextRandom]
   })
 }
 
@@ -206,7 +205,7 @@ startBtn.addEventListener('click', () => {
 
 //add score
 function addScore() {
-  for (let i = 0; i < 100; i += width) {
+  for (let i = 0; i < 199; i += width) {
     const row = [i, i+1, i+2, i+3, i+4, i+5, i+6, i+7, i+8, i+9]
     
     if(row.every(index => squares[index].classList.contains('taken'))) {
@@ -214,7 +213,7 @@ function addScore() {
       scoreDisplay.innerHTML = score
       row.forEach(index => {
         squares[index].classList.remove('taken')
-        squares[incex].classList.remove('tetromino')
+        squares[index].classList.remove('tetromino')
         squares[index].style.backgroundColor = ''
       })
       const squaresRemoved = squares.splice(i,width)
