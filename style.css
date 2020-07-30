@@ -5,7 +5,7 @@
   padding: 10px;
 }
 
-#start-button {
+.start-button {
   background-color: #4CAF50; /* Green */
   border: none;
   border-radius: 12px;
@@ -15,9 +15,12 @@
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
+  position: fixed; /* or absolute */
+  top: 50%;
+  left: 30%;
 }
 
-#start-button:hover {
+.start-button:hover {
   box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
 }
 
@@ -26,7 +29,10 @@
   height: 400px;
   display: flex;
   flex-wrap: wrap;
-  background-color: yellow;
+  background-color: rgba(0,0,0,0.19);
+  position: fixed;
+  top: 10%;
+  left: 60%;
 }
 
 .grid div {
@@ -44,7 +50,11 @@
   height: 80px;
   display: flex;
   flex-wrap: wrap;
-  background-color: yellow;
+  background-color: rgba(0,0,0,0.19);
+  position: fixed;
+  top: 10%;
+  left: 40%;
+
 }
 
 .mini-grid div {
@@ -55,4 +65,9 @@
 body {
   background: #66bacf;
   background: linear-gradient(to right, #6fccb8, #1faec7 85%, #293f50);
+}
+
+.score {
+  font-size: 25px;
+  color: rgb(58, 52, 52);
 }
