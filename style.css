@@ -13,6 +13,7 @@
   padding: 15px 32px;
   text-align: center;
   text-decoration: none;
+  font-family: monospace;
   display: inline-block;
   font-size: 16px;
   position: fixed; /* or absolute */
@@ -31,8 +32,8 @@
   flex-wrap: wrap;
   background-color: rgba(0,0,0,0.19);
   position: fixed;
-  top: 10%;
-  left: 60%;
+  top: 20%;
+  left: 50%;
 }
 
 .grid div {
@@ -52,8 +53,8 @@
   flex-wrap: wrap;
   background-color: rgba(0,0,0,0.19);
   position: fixed;
-  top: 10%;
-  left: 40%;
+  top: 20%;
+  left: 35%;
 
 }
 
@@ -70,4 +71,12 @@ body {
 .score {
   font-size: 25px;
   color: rgb(58, 52, 52);
+  font-family: monospace;
+}
+
+.instructions {
+  /* float: right; */
+  width: 300px; 
+  border: 1px solid #05465f;
+  font: 15px monospace;
 }
