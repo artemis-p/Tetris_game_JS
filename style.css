@@ -1,5 +1,23 @@
+
+h1 {
+  display: flex;
+}
+
+#h3 {
+  text-align: center;
+  padding: 03px 10px 20px 10px;
+}
+
+.button {
+  padding: 30px 10px 20px 80px;
+  align-items: center;
+}
+
 .container {
   display: flex;
+  position: fixed; 
+  top: 20%;
+  left: 42%;
 }
 
 .grid {
@@ -7,7 +25,7 @@
   height: 400px;
   display: flex;
   flex-wrap: wrap;
-  background-color: yellow;
+  background-color: rgb(154, 188, 223);
 }
 
 .grid div {
@@ -16,7 +34,7 @@
 }
 
 .tetromino {
-  background-color: blue;
+  background-color: indigo;
 }
 
 .mini-grid {
@@ -25,10 +43,12 @@
   height: 80px;
   display: flex;
   flex-wrap: wrap;
-  background-color: yellow;
+  background-color: rgb(154, 188, 223);
 }
 
 .mini-grid div {
   height: 20px;
   width: 20px;
 }
+
+
