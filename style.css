@@ -8,12 +8,11 @@ h1 {
 }
 
 #instructions {
-  position: fixed;
   word-wrap: break-word;
 
 }
 
-.button {
+#button {
   padding: 30px 10px 20px 80px;
   align-items: center;
 }
