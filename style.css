@@ -45,6 +45,7 @@ button {
 .pop-up.show{
   animation: show_slide 5s ease forwards;
 }
+
 @keyframes show_slide {
   0%{
     transform: translateX(100%);
@@ -99,7 +100,7 @@ button {
   line-height: 40px;
 }
 
-#str-btn .btn-outline-info {
+#str-btn {
   padding: 30px 10px 20px 80px;
   align-items: center;
 }
