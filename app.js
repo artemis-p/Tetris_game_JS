@@ -2,7 +2,10 @@ document.addEventListener('DOMContentLoaded', () => {
   const grid = document.querySelector('.grid')
   let squares = Array.from(document.querySelectorAll('.grid div'))
   const scoreDisplay = document.querySelector('#score')
-  const startBtn = document.querySelector('#button')
+  const startBtn = document.querySelector('#str-btn')
+  const instructionBtn= document.querySelector('.show-btn')
+  const closeBtn = document.querySelector('.close-btn')
+  const popUp = document.querySelector('.pop-up')
   const width = 10
   let nextRandom = 0
   let timerId // this is null
@@ -222,6 +225,16 @@ function addScore() {
     }
   }
 }
+
+//show instruction button
+instructionBtn.addEventListener('click', (function() {
+  popUp.classList.remove("hide");
+  popUp.classList.add("show");
+}));
+closeBtn.addEventListener('click', (function() {
+  popUp.classList.add("hide");
+  popUp.classList.remove("show");
+}));
 
 //game over
 function gameOver() {

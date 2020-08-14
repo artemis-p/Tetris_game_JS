@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=P')
+
 * {
   margin: 0;
   padding: 0;
@@ -96,20 +97,6 @@ button {
   color: #ce8500;
   font-size: 22px;
   line-height: 40px;
-}
-
-h1 {
-  display: flex;
-}
-
-
-#score {
-  top: 250px;
-}
-
-#instructions {
-  word-wrap: break-word;
-
 }
 
 #str-btn .btn-outline-info {
