@@ -14,7 +14,7 @@ html, body {
 
 body {
   display: grid;
-  place-items: start;
+  /* place-items: start; */
   overflow: hidden;
 }
 
@@ -30,17 +30,19 @@ button {
   border-radius: 4px;
   cursor: pointer;
 }
+
 .pop-up {
    background: #ffdb9b;
    padding: 20px 40px;
    min-width: 420px;
    position: absolute;
    right: 0px;
-   top: 10px;
+   bottom: 10px;
    overflow: hidden;
    border-radius: 4px;
    border-left: 8px solid #ffa502;
 }
+
 
 .pop-up.show{
   animation: show_slide 5s ease forwards;
