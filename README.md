@@ -1,5 +1,5 @@
 # Tetris_game_JS
-A simple Tetris game, similar to the ones most of us have played when we were younger. I built this project by following a freecodecamp.org tutorial to further expand my knowledge in Javascript. 
+A simple Tetris game, similar to the ones most of us have played when we were younger. I decided to built this project, in order to understand how to write functions in JS properly, but also, because this was my first attempt in writing semantic HTML.
 
 ## Visit the web app
 You can find the deployed app in the following link: https://artemis-p.github.io/Tetris_game_JS/
@@ -15,4 +15,10 @@ You can find the deployed app in the following link: https://artemis-p.github.io
 - CSS
 - Javascript
 
-You can find the tutorial here: https://www.freecodecamp.org/news/learn-javascript-by-creating-a-tetris-game/
+## Progress:
+- [x] Update HTML to semantic syntax
+- [x] Update JS based on HTML classes and ids
+- [] Update CSS based on the box-model
+
+
+I got inspired by this tutorial: https://www.freecodecamp.org/news/learn-javascript-by-creating-a-tetris-game/
