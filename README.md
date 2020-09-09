@@ -21,4 +21,4 @@ You can find the deployed app in the following link: https://artemis-p.github.io
 - [ ] Update CSS based on the box-model
 
 
-I got inspired by this tutorial: https://www.freecodecamp.org/news/learn-javascript-by-creating-a-tetris-game/
+Inspired by [this](https://www.freecodecamp.org/news/learn-javascript-by-creating-a-tetris-game/).
