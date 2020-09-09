@@ -18,7 +18,7 @@ You can find the deployed app in the following link: https://artemis-p.github.io
 ## Progress:
 - [x] Update HTML to semantic syntax
 - [x] Update JS based on HTML classes and ids
-- [] Update CSS based on the box-model
+- [ ] Update CSS based on the box-model
 
 
 I got inspired by this tutorial: https://www.freecodecamp.org/news/learn-javascript-by-creating-a-tetris-game/
