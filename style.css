@@ -1,3 +1,33 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+
+:root {
+  --ff-primary: 'Chalkduster, fantasy', fantasy;
+
+  --clr-light: #fff;
+  --clr-dark: #070707;
+  --clr-accent: #a51bcf;
+  --clr-button:  #1bcf2a;
+  --clr-tetromino: #1bcfb7;
+}
+
+
+body {
+  background: var(--clr-dark);
+}
+
+#start-button {
+  background: var(--clr-button);
+  border-radius: 12px;
+  padding: 10px 24px;
+  color: var(--clr-dark);
+  text-decoration: none;
+}
+
 .container {
   display: flex;
 }
@@ -7,7 +37,7 @@
   height: 400px;
   display: flex;
   flex-wrap: wrap;
-  background-color: yellow;
+  background-color: var(--clr-light);
 }
 
 .grid div {
@@ -16,7 +46,7 @@
 }
 
 .tetromino {
-  background-color: blue;
+  background-color: var(--clr-tetromino);
 }
 
 .mini-grid {
@@ -25,7 +55,7 @@
   height: 80px;
   display: flex;
   flex-wrap: wrap;
-  background-color: yellow;
+  background-color: var(--clr-light);
 }
 
 .mini-grid div {
