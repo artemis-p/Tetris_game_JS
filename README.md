@@ -2,7 +2,7 @@
 A simple Tetris game, similar to the ones most of us have played when we were younger. I decided to built this project, in order to understand how to write functions in JS properly, but also, because this was my first attempt in writing semantic HTML.
 
 ## Visit the web app
-You can find the deployed app in the following link: https://artemis-p.github.io/Tetris_game_JS/
+You can find the deployed app in the following [link](https://artemis-p.github.io/Tetris_game_JS/).
 
 ## How to play
 - Hit the 'Start/Pause' button on the website to start playing the game.
